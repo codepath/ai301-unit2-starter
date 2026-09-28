@@ -13,9 +13,9 @@ non-interactive `claude -p` call carrying the skill, the rubric, the
 evidence guide, and the bundle text; the model's last fenced JSON block
 is the verdict.
 
-Every run grades with Sonnet (the course's standard model), regardless
-of the local Claude Code default; the stated pass bar is only valid on
-the model it was validated on.
+Every run grades with Sonnet 5.5 (`claude-sonnet-5-5`, the course's
+standard model), regardless of the local Claude Code default; the stated
+pass bar is only valid on the model it was validated on.
 """
 
 import argparse
@@ -29,7 +29,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-MODEL = "sonnet"
+MODEL = "claude-sonnet-5-5"
 JSON_BLOCK_RE = re.compile(r"```json\s*(\{.*?\})\s*```", re.DOTALL)
 
 PROMPT_TEMPLATE = """\

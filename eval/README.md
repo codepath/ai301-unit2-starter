@@ -40,10 +40,13 @@ shows up at $0.20 instead of on your confirming full run.
 `--include-calibration` composes with `--only`, so a calibration
 package your class already resolved works as a free trap check too.
 
-Every run grades with Sonnet, the course's standard model; there is no
-model flag. This keeps every student's run (and the instructor stability
-runs that set the bar) on the same grader, and Sonnet is the model your
-course credit is budgeted for.
+Every run grades with Sonnet 5.5 (`claude-sonnet-5-5`), the course's
+standard model; there is no model flag. This keeps every student's run
+(and the instructor stability runs that set the bar) on the same grader,
+and Sonnet is the model your course credit is budgeted for. The `model:`
+line at the top of `skill/SKILL.md` names the same model, so when you
+run the skill yourself in Claude Code it grades on Sonnet 5.5 too,
+whatever model your session uses. Leave that line in.
 
 ## Saving the run you commit
 
